@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<!-- Theme by aphex http://www.aphexthemes.com -->
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="XOOPS" />
+<title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_themecss}>" />
+<!-- RMV: added module header -->
+<{$xoops_module_header}>
+<script type="text/javascript">
+<!--
+<{$xoops_js}>
+//-->
+</script>
+<!--[if lt IE 7.]>
+<script defer type="text/javascript" src="<{$xoops_imageurl}>pngfix.js"></script>
+<![endif]-->
+</head>
+
+<body>
+<div id="wrapper">
+<div style="position: absolute; top:-8%;">
+<img src="<{$xoops_imageurl}>images/bshelf.png" alt="" title="" />
+</div>
+<div class="topt">
+<img src="<{$xoops_imageurl}>images/woxhead.jpg" alt="" title="" />
+</div>
+    <div id="content">
+        <!-- Start left-right blocks loop -->
+       <{foreach item=block from=$xoops_lblocks}>
+		<div class="leftc">
+		<div class="blockTitlel"><{$block.title}></div>
+			<div class="blockContentl"><{$block.content}></div>
+	 </div>
+	<{/foreach}>
+             <{foreach item=block from=$xoops_rblocks}>
+		<div class="leftc">
+		<div class="blockTitlel"><{$block.title}></div>
+			<div class="blockContentl"><{$block.content}></div>
+	 </div>
+	<{/foreach}>
+  <!-- End left-right blocks loop -->
+
+    </div>
+
+    <div id="centercontent">
+       <{if $xoops_contents}>
+<div style="wdith: 103%; padding-left: 7px; margin-bottom: 5px;">
+  <b class="main">
+  <b class="main1"><b></b></b>
+  <b class="main2"><b></b></b>
+  <b class="main3"></b>
+  <b class="main4"></b>
+  <b class="main5"></b></b>
+
+  <div class="mainfg">
+	  <div class="xcontent">
+          <{$xoops_contents}>
+        </div>
+    </div>
+
+  <b class="main">
+  <b class="main5"></b>
+  <b class="main4"></b>
+  <b class="main3"></b>
+  <b class="main2"><b></b></b>
+  <b class="main1"><b></b></b></b>
+</div>
+<{/if}>
+  <{foreach item=block from=$xoops_ccblocks}>
+	<div class="centerc">
+		<div class="blockTitlerl"><{$block.title}></div>
+		<div class="blockContentc"><{$block.content}></div>
+	</div>
+<{/foreach}>
+		<!-- Start center-left blocks loop -->
+			<{foreach item=block from=$xoops_clblocks}>
+	<div class="centerl">
+			<div class="blockTitlerl"><{$block.title}></div>
+			<div class="blockContentrl"><{$block.content}></div>
+	</div>
+			<{/foreach}>
+			<!-- End center-left blocks loop -->
+		<!-- Start center-left blocks loop -->
+			<{foreach item=block from=$xoops_crblocks}>
+	<div class="centerr">
+			<div class="blockTitlerl"><{$block.title}></div>
+			<div class="blockContentrl"><{$block.content}></div>
+</div>
+			<{/foreach}>
+			<!-- End center-left blocks loop -->
+
+        <{if $xoBlocks.page_bottomcenter}>
+	<{foreach from=$xoBlocks.page_bottomcenter item=block}>
+	<div class="bottomc">
+			<div class="bottomTitle"><{$block.title}></div>
+			<div class="bottomContent"><{$block.content}></div>
+	<{/foreach}>
+   <{/if}>
+	 <{if $xoBlocks.page_bottomleft or $xoBlocks.page_bottomright}>
+		<{foreach from=$xoBlocks.page_bottomleft item=block}>
+	<div class="bottoml">
+			<div class="bottomTitlerl"><{$block.title}></div>
+			<div class="blockContentrl"><{$block.content}></div>
+	</div>
+		<{/foreach}>
+		<{foreach from=$xoBlocks.page_bottomright item=block}>
+	<div class="bottomr">
+			<div class="bottomTitlerl"><{$block.title}></div>
+			<div class="blockContentrl"><{$block.content}></div>
+	</div>
+		<{/foreach}>
+
+</div>
+<{/if}>
+</div>
+
+    <div id="footer">
+        <span class="left">Design by <a href="http://www.aphexthemes.com" target="_blank">aphex's themes</a></span>
+
+     <span class="right">
+     <{$xoops_footer}></span>
+    </div>
+
+</div>
+</body>
+</html>
